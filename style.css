@@ -1,6 +1,10 @@
 body{
-    background: linear-gradient(to bottom right, rgb(164, 148, 236), rgb(14, 176, 179));
+    
     display: flex;
+    background-image: url(../images/jojo.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -8,10 +12,7 @@ body{
 .test {
     max-width: 700px;
     width: 100vh;
-    background-image: url(../images/jojo.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background: linear-gradient(to bottom right, rgb(164, 148, 236), rgb(14, 176, 179));
     padding: 30px;
     border-radius: 20px;
     display: flex;
@@ -26,24 +27,27 @@ body{
 .test__question {
     font-size: 24px;
     margin-bottom: 25px;
+    line-height: 1.2em;
 }
 .test__answers {
-    
     margin-bottom: 25px;
     padding: 10px;
-   
-    
+  
 }
 .test__answer{
     background: linear-gradient(to right, rgb(163, 226, 191), rgb(245, 111, 243));
     border: 1px solid #333;
     padding: 10px;
     border-radius: 20px;
-    
-
 }
 .test__answer:not(:last-child) {
     margin-bottom: 10px;
+}
+.test__answer.valid{
+    background-color: rgba(0, 255, 0, 0.5);
+}
+.test__answer.invalid{
+    background-color: rgba(255, 0, 0, 0.5);
 }
 .test__btn {
     border: 1px solid #333;
@@ -52,7 +56,5 @@ body{
     font-size: 24px;
     display: inline-block;
     margin: 0 auto;
-    background: linear-gradient(to right, rgb(163, 226, 191), rgb(245, 111, 243));
-    
-    
+    background: linear-gradient(to right, rgb(163, 226, 191), rgb(245, 111, 243));  
 }
