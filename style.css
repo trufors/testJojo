@@ -1,0 +1,58 @@
+body{
+    background: linear-gradient(to bottom right, rgb(164, 148, 236), rgb(14, 176, 179));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.test {
+    max-width: 700px;
+    width: 100vh;
+    background-image: url(../images/jojo.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.test__theme {
+    text-align: left;
+    font-size: 36px;
+    margin-bottom: 25px;
+
+}
+.test__question {
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+.test__answers {
+    
+    margin-bottom: 25px;
+    padding: 10px;
+   
+    
+}
+.test__answer{
+    background: linear-gradient(to right, rgb(163, 226, 191), rgb(245, 111, 243));
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 20px;
+    
+
+}
+.test__answer:not(:last-child) {
+    margin-bottom: 10px;
+}
+.test__btn {
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 24px;
+    display: inline-block;
+    margin: 0 auto;
+    background: linear-gradient(to right, rgb(163, 226, 191), rgb(245, 111, 243));
+    
+    
+}
