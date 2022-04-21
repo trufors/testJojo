@@ -44,10 +44,10 @@ body{
     margin-bottom: 10px;
 }
 .test__answer.valid{
-    background-color: rgba(0, 255, 0, 0.5);
+    background-color: rgba(31, 227, 31, 0.5);
 }
 .test__answer.invalid{
-    background-color: rgba(255, 0, 0, 0.5);
+    background-color: rgba(251, 3, 3, 0.5);
 }
 .test__btn {
     border: 1px solid #333;
