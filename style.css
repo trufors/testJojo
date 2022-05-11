@@ -35,7 +35,7 @@ body{
   
 }
 .test__answer{
-    background: linear-gradient(to right, rgb(163, 226, 191), rgb(245, 111, 243));
+    background: rgba(225, 225, 225, 0.5);
     border: 1px solid #333;
     padding: 10px;
     border-radius: 20px;
@@ -43,10 +43,10 @@ body{
 .test__answer:not(:last-child) {
     margin-bottom: 10px;
 }
-.test__answer.valid{
+.test__answer.valid {
     background-color: rgba(31, 227, 31, 0.5);
 }
-.test__answer.invalid{
+.test__answer.invalid {
     background-color: rgba(251, 3, 3, 0.5);
 }
 .test__btn {
@@ -57,4 +57,9 @@ body{
     display: inline-block;
     margin: 0 auto;
     background: linear-gradient(to right, rgb(163, 226, 191), rgb(245, 111, 243));  
+}
+.test__btn.disable {
+    pointer-events: none;
+    opacity: 0.5;
+
 }
