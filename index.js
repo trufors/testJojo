@@ -127,15 +127,15 @@ function renderResult(){
 //подсчет правильных ответов
 function wellDoneAnswer(answer){
     if(answer > 8){
-        dom.testImg.style.backgroundImage = 'url(../images/kakein.gif)'
+        dom.testImg.style.backgroundImage = 'url(images/kakein.gif)'
         dom.testStatus.innerHTML = 'Ваши знания похвальны, как язык Какёина Нориаки'
 
     } else if(answer <= 8 && answer > 6){
-        dom.testImg.style.backgroundImage = 'url(../images/yare.gif)'
+        dom.testImg.style.backgroundImage = 'url(images/yare.gif)'
         dom.testStatus.innerHTML = 'Джотаро негодует, но и так сойдет'
 
     } else{
-        dom.testImg.style.backgroundImage = 'url(../images/muda.gif)'
+        dom.testImg.style.backgroundImage = 'url(images/muda.gif)'
         dom.testStatus.innerHTML = 'Вы получили MUDA MUDA MUDA MUDA от DIO'
 
     }
