@@ -72,7 +72,7 @@ body{
 }
 .test__result-img{
     display: none;
-    background-image: url("images/dio.jpeg");
+    background-image: url(images/dio.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
