@@ -1,9 +1,13 @@
 const dom = {
     testTheme: document.getElementById('test-theme'),
     questionNumber: document.getElementById('question-number'),
+    questionBlock: document.getElementById('question-block'),
+    testImg: document.getElementById('test-img'),
     question: document.getElementById('question'),
     answers: document.getElementById('answers'),
     btn: document.getElementById('btn'),
+    testStatus: document.getElementById('test-status'),
+    testResult: document.getElementById('test-result'),
 }
 
 // функция рандомной сортировки элемента массива
@@ -19,8 +23,8 @@ function randomArray(arr,count) {
     return randomArr 
 }
 
-const newQuestionArr = randomArray(data.questions,5)
-let questionIdx = 0
+const newQuestionArr = randomArray(data.questions,10)
+let questionIdx = 1
 
 // функция вывода вопроса
 
@@ -50,20 +54,26 @@ function renderQuestionWithAnswers(data, questionNumber){
     dom.questionNumber.innerHTML = questionNumber
     dom.question.innerHTML = data.question
     renderAnswers(answers, rightAnswer)
+    blockButton(true)
 }
 
 renderQuestionWithAnswers(newQuestionArr[0],1)
-
+let rightOtvet = 0
 //отслеживание клика по кнопке
 dom.btn.onclick = () => {
     const question = newQuestionArr[questionIdx]
     const questionNumber = questionIdx + 1
+    const nextQuestion = newQuestionArr[questionNumber]
     if(question){    
         renderQuestionWithAnswers(question, questionNumber)
         questionIdx++
         isSelectAnswer = !isSelectAnswer
+        if(nextQuestion === undefined){
+            changeButton()
+        }  
     } else {
-        alert('вопросы закончились')
+        renderResult()
+
     }
 }
 
@@ -73,7 +83,7 @@ dom.answers.onclick = (event) => {
     if(isAnswerClick && !isSelectAnswer){
         renderAnswersStatus(event.target)
         isSelectAnswer = !isSelectAnswer
-
+        blockButton(false)
     }
 }
 
@@ -81,11 +91,54 @@ function renderAnswersStatus(answer){
    const isValid = answer.dataset.valid !== undefined
    if (isValid){
        answer.classList.add('valid')
+       rightOtvet++
    } else {
        const validAnswer = answer.parentNode.querySelector('[data-valid]')
        answer.classList.add('invalid')
        validAnswer.classList.add('valid')
    }
+}
+//блок кнопки
+function blockButton (isDisabled){
+    if(isDisabled){
+        dom.btn.classList.add('disable')
+    } else{
+        dom.btn.classList.remove('disable')
+    }
+}
+
+//изменение кнопки
+function changeButton() {
+    dom.btn.innerHTML = 'Посмотреть результат'
+    dom.btn.dataset.result = true
+}
+//трансформация в финальный экран
+function renderResult(){
+    dom.questionBlock.style.display = 'none'
+    dom.answers.style.display = 'none'
+    dom.btn.style.display = 'none'
+    dom.testImg.style.display = 'inline'
+    dom.testStatus.style.display = 'inline-block'
+    dom.testTheme.innerHTML = 'Ваш результат:'
+    wellDoneAnswer(rightOtvet)
+
+}
+
+//подсчет правильных ответов
+function wellDoneAnswer(answer){
+    if(answer > 8){
+        dom.testImg.style.backgroundImage = 'url(../images/kakein.gif)'
+        dom.testStatus.innerHTML = 'Ваши знания похвальны, как язык Какёина Нориаки'
+
+    } else if(answer <= 8 && answer > 6){
+        dom.testImg.style.backgroundImage = 'url(../images/yare.gif)'
+        dom.testStatus.innerHTML = 'Джотаро негодует, но и так сойдет'
+
+    } else{
+        dom.testImg.style.backgroundImage = 'url(../images/muda.gif)'
+        dom.testStatus.innerHTML = 'Вы получили MUDA MUDA MUDA MUDA от DIO'
+
+    }
 }
 
 
