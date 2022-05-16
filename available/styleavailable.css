@@ -1,0 +1,84 @@
+body{
+    
+    
+}
+.header__top{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px 0 20px;
+    justify-content: space-evenly;
+}
+.menu__item{
+    display: flex;
+}
+.menu__list{
+    margin-right: 30px;
+    list-style: none;
+}
+.menu__link{
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;  
+    transition: color .5s;
+    text-decoration: none;
+    color: inherit;
+}
+.menu__link:hover{
+    color: #CB0E0E;
+}
+.available__test{
+    
+    display: flex;
+    background-image: url(../../images/jojo.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    justify-content:space-evenly;
+
+}
+.test {
+    max-width: 700px;
+    width: 100vh;
+    background: linear-gradient(to bottom right, rgb(164, 148, 236), rgb(14, 176, 179));
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.test__theme {
+    text-align: left;
+    font-size: 40px;
+    margin-bottom: 25px;
+
+}
+.test__question {
+    font-size: 30px;
+    margin-bottom: 25px;
+    line-height: 1.2em;
+    color: #fff;
+}
+.test__answers {
+    margin-bottom: 25px;
+    padding: 10px;
+  
+}
+.test__answer{
+    background: rgba(225, 225, 225, 0.5);
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 20px;
+    
+}
+.test__answer:not(:last-child) {
+    margin-bottom: 10px;
+}
+.answer__link{
+    text-decoration: none;
+    color: inherit;
+}
