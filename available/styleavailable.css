@@ -1,8 +1,7 @@
 body{
-    
-    
+    margin: 0px;
 }
-.header__top{
+.footer__top{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -30,7 +29,7 @@ body{
 .available__test{
     
     display: flex;
-    background-image: url(../../images/jojo.jpeg);
+    background-image: url(../images/available.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -44,7 +43,7 @@ body{
 .test {
     max-width: 700px;
     width: 100vh;
-    background: linear-gradient(to bottom right, rgb(164, 148, 236), rgb(14, 176, 179));
+    background: rgba(193, 193, 193, 0.5);
     padding: 30px;
     border-radius: 20px;
     display: flex;
@@ -65,6 +64,9 @@ body{
 .test__answers {
     margin-bottom: 25px;
     padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
   
 }
 .test__answer{
@@ -73,6 +75,8 @@ body{
     padding: 10px;
     border-radius: 20px;
     font-size: 20px;
+    text-decoration: none;
+    color: inherit;
     
 }
 .test__answer:not(:last-child) {

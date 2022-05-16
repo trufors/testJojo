@@ -3,7 +3,7 @@ body{
     
     
 }
-.header__top{
+.footer__top{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
