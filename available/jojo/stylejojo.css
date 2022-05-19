@@ -3,6 +3,20 @@ body{
     
     
 }
+.container{
+    max-width: 720px;
+      
+}
+.progress__bar{
+    display :flex;
+  
+    background: linear-gradient(to right, rgb(94, 255, 0), rgb(249, 43, 246)); 
+    height: 10px;
+    border-radius: 5px;
+    width: 0px;
+    margin-top: 20px;
+
+}
 .footer__top{
     display: flex;
     flex-wrap: wrap;
@@ -40,7 +54,7 @@ body{
     justify-content: center;
     height: 100vh;
     flex-direction: column;
-    justify-content:space-evenly;
+    justify-content:center;
 
 }
 .test {

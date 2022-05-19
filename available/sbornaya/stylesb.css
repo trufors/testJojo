@@ -70,7 +70,7 @@ body{
   
 }
 .test__answer{
-    background: rgba(225, 225, 225, 0.1);
+    background: rgba(225, 225, 225, 0.5);
     border: 1px solid #333;
     padding: 10px;
     border-radius: 20px;

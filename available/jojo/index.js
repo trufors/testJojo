@@ -8,6 +8,7 @@ const dom = {
     btn: document.getElementById('btn'),
     testStatus: document.getElementById('test-status'),
     testResult: document.getElementById('test-result'),
+    progressBar: document.getElementById('progress-bar'),
 }
 
 // функция рандомной сортировки элемента массива
@@ -68,12 +69,14 @@ dom.btn.onclick = () => {
         renderQuestionWithAnswers(question, questionNumber)
         questionIdx++
         isSelectAnswer = !isSelectAnswer
+        progressBar()
         if(nextQuestion === undefined){
             changeButton()
+            
         }  
     } else {
         renderResult()
-
+        progressBar()
     }
 }
 
@@ -127,18 +130,25 @@ function renderResult(){
 //подсчет правильных ответов
 function wellDoneAnswer(answer){
     if(answer > 8){
-        dom.testImg.style.backgroundImage = 'url(images/kakein.gif)'
+        dom.testImg.style.backgroundImage = 'url(../../images/kakein.gif)'
         dom.testStatus.innerHTML = 'Ваши знания похвальны, как язык Какёина Нориаки'
 
     } else if(answer <= 8 && answer > 6){
-        dom.testImg.style.backgroundImage = 'url(images/yare.gif)'
+        dom.testImg.style.backgroundImage = 'url(../../images/yare.gif)'
         dom.testStatus.innerHTML = 'Джотаро негодует, но и так сойдет'
 
     } else{
-        dom.testImg.style.backgroundImage = 'url(images/muda.gif)'
+        dom.testImg.style.backgroundImage = 'url(../../images/muda.gif)'
         dom.testStatus.innerHTML = 'Вы получили MUDA MUDA MUDA MUDA от DIO'
 
     }
+}
+let numberAnswers = 1
+//progress bar
+function progressBar(){
+    const percent = 72
+    dom.progressBar.style.width = `${numberAnswers*percent}px`
+    numberAnswers++
 }
 
 
