@@ -11,6 +11,7 @@ const data = {
                 'JoJos Bizar Adventure',
             ],
             rightAnswer: 3,
+            whyIsThis:'Это просто название, тут нечего объяснять'
         },
         {
             id: 2,
@@ -22,6 +23,7 @@ const data = {
                 'Джордж Джостар',
             ],
             rightAnswer: 4,
+            whyIsThis:'Первый JoJo, был именно Джордж Джостар, отец первого JoJo из первого сезона. Он приютил ДИООО к себе в семью.'
         },
         {
             id: 3,
@@ -33,6 +35,7 @@ const data = {
                 'MUDA MUDA MUDA MUDA MUDA',
             ],
             rightAnswer: 1,
+            whyIsThis:'Это просто название, тут нечего объяснять',
         },
         {
             id: 4,
@@ -44,6 +47,7 @@ const data = {
                 'Абдула',
             ],
             rightAnswer: 1,
+            whyIsThis:'Это просто название, тут нечего объяснять',
         },
         {
             id: 5,
@@ -55,6 +59,7 @@ const data = {
                 'Сантана',
             ],
             rightAnswer: 3,
+            whyIsThis:'Это просто название, тут нечего объяснять',
         },
         {
             id: 6,
@@ -66,6 +71,7 @@ const data = {
                 'Холи Куджо',
             ],
             rightAnswer: 1,
+            whyIsThis:'Это просто название, тут нечего объяснять',
         },
         {
             id: 7,
@@ -77,6 +83,7 @@ const data = {
                 'Джэй Гайл',
             ],
             rightAnswer: 2,
+            whyIsThis:'Это просто название, тут нечего объяснять',
         },
         {
             id: 8,
@@ -88,6 +95,7 @@ const data = {
                 'Sun',
             ],
             rightAnswer: 3,
+            whyIsThis:'Это просто название, тут нечего объяснять',
         },
         {
             id: 9,
@@ -99,6 +107,7 @@ const data = {
                 'Xамон, Stand',
             ],
             rightAnswer: 1,
+            whyIsThis:'Это просто название, тут нечего объяснять',
         },
         {
             id: 10,
@@ -110,6 +119,7 @@ const data = {
                 'ORAORAORAORAORAORA',
             ],
             rightAnswer: 2,
+            whyIsThis:'Это просто название, тут нечего объяснять',
         },
         
     ]

@@ -9,6 +9,8 @@ const dom = {
     testStatus: document.getElementById('test-status'),
     testResult: document.getElementById('test-result'),
     progressBar: document.getElementById('progress-bar'),
+    whyThis: document.getElementById('why-this'),
+    whyText: document.getElementById('why-text'),
 }
 
 // функция рандомной сортировки элемента массива
@@ -74,7 +76,9 @@ dom.btn.onclick = () => {
             changeButton()
             
         }  
+        dom.whyThis.style.display = 'none'
     } else {
+        dom.whyThis.style.display = 'none'
         renderResult()
         progressBar()
     }
@@ -87,6 +91,7 @@ dom.answers.onclick = (event) => {
         renderAnswersStatus(event.target)
         isSelectAnswer = !isSelectAnswer
         blockButton(false)
+        whyAnswer()
     }
 }
 
@@ -143,13 +148,19 @@ function wellDoneAnswer(answer){
 
     }
 }
-let numberAnswers = 1
+let numberAnswers = 0
 //progress bar
 function progressBar(){
     const percent = 72
-    dom.progressBar.style.width = `${numberAnswers*percent}px`
+    dom.progressBar.style.width = `${(numberAnswers+1)*percent}px`
     numberAnswers++
 }
+
+function whyAnswer(){
+    dom.whyThis.style.display = 'inline'
+    dom.whyText.textContent = newQuestionArr[numberAnswers].whyIsThis  
+}
+
 
 
 
