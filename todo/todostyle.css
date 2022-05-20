@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+}
+.header__top{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px 0 20px;
+    justify-content: space-evenly;
+
+}
+.menu__item{
+    display: flex;
+}
+.menu__list{
+    margin-right: 30px;
+    list-style: none;
+    
+}
+.menu__link{
+    
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;  
+    transition: color .5s;
+    text-decoration: none;
+    color: inherit;
+}
+.menu__link:hover{
+    color: #CB0E0E;
+}
+.container{
+    max-width: 920px;
+    padding: 0 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+.todo__input{
+    align-items: center;
+    margin-bottom: 20px;
+    
+}
+.todo__elem{
+    display: flex;
+    margin-bottom: 20px;
+    
+
+}
+.todo__checkbox{
+    width: 22px;
+    height: 22px;
+}
+.todo__text{
+    margin: 0;
+    padding: 0 10px;
+    font-size: 24px;
+}
+.complete__todo{
+    text-decoration: line-through;
+}
